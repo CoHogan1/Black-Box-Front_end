@@ -1,0 +1,32 @@
+.App {
+    border: 2px solid purple;
+  text-align: center;
+}
+
+.nav {
+    background-color: black;
+    color:white;
+}
+.addNewVacationForm {
+    border: 2px solid green;
+}
+
+.vacationTable {
+    margin: auto;
+    border: 2px solid yellow;
+}
+
+.editForm {
+    border: 2px solid red;
+}
+
+.hotelsDiv{
+    border: 2px solid cyan;
+}
+.WeatherDiv {
+    border: 2px solid black;
+}
+.ticketDiv{
+    border: 2px solid red;
+
+}
