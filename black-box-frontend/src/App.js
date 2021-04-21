@@ -2,11 +2,8 @@ import './App.css'
 import React, { Component } from 'react'
 import Nav from './nav'
 import VacationForm from './newVaca'
-
-//import RichardsFile from './richardsfile'
-
-//import Marcus'File from './marcusfile'
-
+import Hotel from './hotels'
+import Weather from './weather'
 
 //console.log(process.env.NODE_ENV)
 let baseURL = ''
@@ -24,6 +21,8 @@ class App extends Component {
             allVaca: [],
             showModal: false,
             editVaca: {},
+            showAll: false,
+            toggleAllVaca: false,
         }
     }
 
@@ -49,7 +48,7 @@ class App extends Component {
     addVaca = (newVaca) => {
         const copyVaca = [...this.state.allVaca]
         copyVaca.push(newVaca)
-        // push plces the data at the end of the array.
+        // push places the data at the end of the array.
         //use array.length -1 as an index to get last item.
         //maybe use unshift to add it to the beginning of the array. and [0]
         this.setState({
@@ -77,7 +76,9 @@ class App extends Component {
         catch(err){
             console.log(err)
         }
+        window.location.reload(false) // reloads the file.
     }
+
     handleSubmit = async (e) => {
         e.preventDefault()
         //console.log(this.state.editVaca._id)
@@ -134,21 +135,45 @@ class App extends Component {
             editVaca: vacation,
         })
     }
+
+
     componentDidMount() {
         this.getVacations()
     }
+
+
+    toggleAllVaca = () =>{
+        //console.log("clicking");
+        this.setState({
+            toggleAllVaca: !this.state.toggleAllVaca
+        })
+        //console.log(this.state.showAll)
+    }
+    toggleShowAll = () => {
+        console.log('clicked')
+        this.setState({
+            showAll: !this.state.showAll
+        })
+    }
+
+
 
     render() {
         //console.log(this.state.allVaca)
         return (
             <div className="App">
 
-                { this.state.allVaca.length > 0 && <Nav thisIsAProp={this.state.allVaca[3]}/> }
+                { this.state.allVaca.length > 0 &&
+                    <Nav thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>
+                }
 
                 <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } />
 
-            <div>This table displays all Vacations:
+            <button onClick={this.toggleAllVaca}>View Recent Vacations</button>
+            <button onClick={this.toggleShowAll}> test data</button>
 
+            {this.state.toggleAllVaca &&
+            <div>
             <table className="vacationTable">
               <tbody>
                 {this.state.allVaca.map(vaca => {
@@ -158,7 +183,7 @@ class App extends Component {
                             <td>{vaca.location}</td>
                             <td>{vaca.dateFrom}</td>
                             <td>{vaca.dateTo}</td>
-                            <td onClick={ ()=> this.deleteVaca(vaca._id) }>~~Delete~~</td>
+                            <td onClick={ ()=> this.deleteVaca(vaca._id) }>~Delete~</td>
                             <td onClick={ ()=> this.showEdit(vaca)}>Edit:</td>
                         </tr>
                     )
@@ -173,16 +198,12 @@ class App extends Component {
                 <form onSubmit={this.handleSubmit} className="editForm">
                     <h1>This form edits vaacation</h1>
                     <h1>Edit:</h1>
-
                     <label>Name:</label>
                     <input name="name"  value={this.state.name} onChange={this.handleChange} ></input><br></br>
-
                     <label>location:</label>
                     <input name="location" value={this.state.location} onChange={this.handleChange} ></input><br></br>
-
                     <label>Date From:</label>
                     <input name="dateFrom"  value={this.state.dateFrom} onChange={this.handleChange} ></input><br></br>
-
                     <label>Date To:</label>
                     <input name="dateTo" value={this.state.dateTo} onChange={this.handleChange} ></input><br></br>
 
@@ -191,12 +212,33 @@ class App extends Component {
             }
         </div>
 
-        <div className="hotelsDiv">Hotels</div>
+        }
 
-        <div className="WeatherDiv">Weather</div>
 
-        <div className="ticketDiv">Maybe Ticket Price</div>
 
+        {this.state.showAll &&
+
+        <div className="hotelsDiv">
+
+
+            <Hotel vaca={this.state.allVaca[this.state.allVaca.length-1]}/>
+
+
+
+
+        </div>
+
+
+        }
+
+
+
+        {this.state.showAll &&
+        <div className="WeatherDiv">Weather
+            <Weather vaca={this.state.allVaca[this.state.allVaca.length -1]}/>
+
+        </div>
+        }
 
         </div>
         )

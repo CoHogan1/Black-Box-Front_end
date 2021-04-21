@@ -9,23 +9,27 @@ class Nav extends React.Component {
     }
 
     render(){
-        console.log(this.state.currentVacation + " loging from nav file")
-        console.log(this.props.thisIsAProp.name)
-        console.log(this.props.thisIsAProp.location)
-        console.log(this.props.thisIsAProp.dateFrom)
-        console.log(this.props.thisIsAProp.dateTo)
+        //console.log(this.state.currentVacation + " loging from nav file")
+        // console.log(this.props.thisIsAProp.name)
+        // console.log(this.props.thisIsAProp.location)
+        // console.log(this.props.thisIsAProp.dateFrom)
+        // console.log(this.props.thisIsAProp.dateTo)
 
         return (
             <div className="nav">
-                <h1>NavBar</h1>
+            <h1>Black Box Vacations</h1>
 
-            <p>{this.state.currentVacation.name}</p>
+            {this.state.currentVacation !== '' &&
 
-
-
-                <div className="cart">
-                    <p>Vacation</p>
+                <div className="currentVaca">
+                    <div className="vacaData" >Name: {this.state.currentVacation.name}</div>
+                    <div className="vacaData" >Where: {this.state.currentVacation.location}</div>
+                    <div className="vacaData" >From: {this.state.currentVacation.dateFrom}</div>
+                    <div className="vacaData" >To: {this.state.currentVacation.dateTo}</div>
                 </div>
+            }
+
+
             </div>
         )
     }

@@ -1,14 +1,43 @@
-.App {
-    border: 2px solid purple;
-  text-align: center;
+body{
+    background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/giza-egypt-pyramids-in-sunset-scene-wonders-of-the-royalty-free-image-1588090115.jpg?crop=1xw:1xh;center,top&resize=980:*);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: ;
 }
 
+.App {
+    text-align: center;
+}
 .nav {
-    background-color: black;
-    color:white;
+    margin-top: 20px;
+    background-color: rgba(0,0,0, 0.75);
+    padding: 5px;
+    color: gold;
+    height: 25%;
+}
+.nav > h1 {
+    text-align: center;
+    margin: auto;
+    background-color: rgba(255,255,255, 0.2);
+    font-size: 50px;
+    width: 50%;
+    border-radius: 10px;
+    text-shadow: 0 0 10px black;
+    margin-top: 10px;
+
+}
+.vacaData {
+    background-color: rgba(0,0,0, 0.7);
+    padding: 7px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    color:silver;
+    text-shadow: 0 0  20px black;
+    margin-top: 25px;
 }
 .addNewVacationForm {
     border: 2px solid green;
+    background-color: rgba(250,250,250, 0.5);
 }
 
 .vacationTable {
@@ -29,4 +58,45 @@
 .ticketDiv{
     border: 2px solid red;
 
+}
+.currentVaca {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+
+}
+.hotelData {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.hotel {
+    border: 3px solid black;
+    padding: 10px;
+}
+
+.allWeather{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.days {
+    border: 2px solid green;
+    padding: 10px;
+}
+
+input {
+    width: 100px;
+}
+
+.searchInput{
+    height: 30px;
+    border-radius: 4px;
+    border: 3px solid gold;
+    color:white;
+    background-color: black;
+    padding: 3px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }

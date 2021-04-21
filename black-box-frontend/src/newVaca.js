@@ -12,6 +12,7 @@ export default class VacationForm extends Component {
             location: '',
             dateFrom: '',
             dateTo: '',
+            toggle: true,
         }
     }
 
@@ -25,6 +26,10 @@ export default class VacationForm extends Component {
     // handles form submitting, this should add the vacation info to the db...
     handleSubmit = (event) => {
         event.preventDefault()
+        if (this.state.name === '') {
+            alert('Please fill out form')
+            return
+        }
         console.log(this.props.baseURL + '/blackbox');
         // console.log(this.state.name)
         // console.log(this.state.location)
@@ -52,31 +57,47 @@ export default class VacationForm extends Component {
                 dateFrom: '',
                 dateTo: '',
               })
+              //console.log(this.state.name);
             }).catch (error => console.error({'Error': error}))
+            this.setState({
+                toggle: !this.state.toggle
+            })
+            console.log(this.state.name)
+            console.log(this.state.toggle)
+            //window.location.reload(false)// https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react
         }
 
     render() {
         return(
             <div>
+            {this.state.toggle ?
+                <form onSubmit={this.handleSubmit} className="addNewVacationForm">
+                    <h1>Start your Vacation</h1>
 
-            <form onSubmit={this.handleSubmit} className="addNewVacationForm">
-            <h1>This form adds a vacation.</h1>
+                    <label>Name:</label>
+                    <input name="name" id="name" onChange={(evt)=> this.handleChange(evt)} value={this.state.name}></input>
 
-                <label>Name:</label>
-                <input name="name" id="name" onChange={(evt)=> this.handleChange(evt)} ></input><br></br>
+                    <label>location:</label>
+                    <input name="location" id="location" onChange={(evt)=> this.handleChange(evt)} value={this.state.location}></input>
 
-                <label>location:</label>
-                <input name="location" id="location" onChange={(evt)=> this.handleChange(evt)} ></input><br></br>
+                    <label>Date From:</label>
+                    <input name="dateFrom"id="dateFrom"  onChange={(evt)=> this.handleChange(evt)} value={this.state.dateFrom}></input>
 
-                <label>Date From:</label>
-                <input name="dateFrom"id="dateFrom"  onChange={(evt)=> this.handleChange(evt)} ></input><br></br>
+                    <label>Date To:</label>
+                    <input name="dateTo" id="dateTo" onChange={(evt)=> this.handleChange(evt)} value={this.state.dateTo}></input><br></br>
 
-                <label>Date To:</label>
-                <input name="dateTo" id="dateTo" onChange={(evt)=> this.handleChange(evt)} ></input><br></br>
+                    <input className="searchInput" type="submit" value="Search"></input>
 
-                <input type="submit" value="Visit"></input>
+                </form>
+                :
+                null
+                }
 
-            </form>
+
+
+
+
+
 
             </div>
         )
