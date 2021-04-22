@@ -10,8 +10,8 @@ class Nav extends React.Component {
 
     render(){
         return (
-            <div className="nav">
-                
+            <div className="navFile">
+
             <h1>Black Box Vacations</h1>
 
             {this.state.currentVacation !== '' &&
