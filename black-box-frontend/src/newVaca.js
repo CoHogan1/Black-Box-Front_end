@@ -59,21 +59,13 @@ export default class VacationForm extends Component {
               })
               //console.log(this.state.name);
             }).catch (error => console.error({'Error': error}))
-            this.setState({
-                toggle: !this.state.toggle
-            })
-            console.log(this.state.name)
-            console.log(this.state.toggle)
-            //window.location.reload(false)// https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react
         }
 
     render() {
         return(
             <div>
-            {this.state.toggle ?
                 <form onSubmit={this.handleSubmit} className="addNewVacationForm">
                     <h1>Start your Vacation</h1>
-
                     <label>Name:</label>
                     <input name="name" id="name" onChange={(evt)=> this.handleChange(evt)} value={this.state.name}></input>
 
@@ -87,18 +79,7 @@ export default class VacationForm extends Component {
                     <input name="dateTo" id="dateTo" onChange={(evt)=> this.handleChange(evt)} value={this.state.dateTo}></input><br></br>
 
                     <input className="searchInput" type="submit" value="Search"></input>
-
                 </form>
-                :
-                null
-                }
-
-
-
-
-
-
-
             </div>
         )
     }
