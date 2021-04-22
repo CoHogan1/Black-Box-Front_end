@@ -1,5 +1,6 @@
 import './App.css'
 import React, { Component } from 'react'
+import FoodInfo from './FoodInfo'
 
 
 export default class Hotel extends Component {
@@ -11,14 +12,14 @@ export default class Hotel extends Component {
         }
     }
 
-    fetchHotels = async () => {
+    fetchHotels =  () => {
       console.log(this.state.vaca.location )
       console.log(this.state.vaca.dateFrom)
       console.log(this.state.vaca.dateTo)
       fetch(`https://hotels-com-provider.p.rapidapi.com/v1/destinations/search?locale=en_US&currency=USD&query=${this.state.vaca.location}`,{
         "method": "GET",
         "headers": {
-          "x-rapidapi-key": "1100ee3563msh306384d3f712ffdp121f25jsncc28e308216a",// this api key needs updating...
+          "x-rapidapi-key": "5168948a50msh664513c5262f841p1e6c29jsn7b3a056e3cea",// this api key needs updating...
           "x-rapidapi-host": "hotels-com-provider.p.rapidapi.com"
         }
       })
@@ -31,7 +32,7 @@ export default class Hotel extends Component {
         return fetch(`https://hotels-com-provider.p.rapidapi.com/v1/hotels/search?adults_number=1&checkin_date=${this.state.vaca.dateFrom}&destination_id=${destination}&checkout_date=${this.state.vaca.dateTo}&currency=USD&locale=en_US&sort_order=STAR_RATING_HIGHEST_FIRST`, {
           "method": "GET",
           "headers": {
-          "x-rapidapi-key": "1100ee3563msh306384d3f712ffdp121f25jsncc28e308216a",
+          "x-rapidapi-key": "5168948a50msh664513c5262f841p1e6c29jsn7b3a056e3cea",
           "x-rapidapi-host": "hotels-com-provider.p.rapidapi.com"
           }
         })
@@ -61,7 +62,45 @@ export default class Hotel extends Component {
                 return (
                   <div className='hotels'>
 
-                    <h1> Name : {hotel.name} </h1>
+                    <img src= {hotel.optimizedThumbUrls.srpDesktop} />
+                    <h1> Name : {hotel.name} 
+                    <span> 
+                      <button
+                        onClick={async(event)=> {
+                        
+                          await console.log('before' ,this.state )
+                          await this.setState ({
+                            chosenHotel: hotel.name,
+                            zipCode: hotel.address.postalCode
+                          })
+                          
+                          console.log('after state has been changed', this.state)
+
+                            const food = await fetch(`https://us-restaurant-menus.p.rapidapi.com/restaurants/zip_code/${this.state.zipCode}?page=1`, {
+                              "method": "GET",
+                              "headers": {
+                              "x-rapidapi-key": "795f80971amshb1391e4caeb5a9ep12537bjsn967a63f3bd1a",
+                              "x-rapidapi-host": "us-restaurant-menus.p.rapidapi.com"
+                                }
+                            })
+                          console.log(food)
+                          
+                          const parsedFood = await food.json()
+                        
+                          console.log(parsedFood) 
+
+                          await this.setState({
+                            restaurants: parsedFood.result.data
+                          })
+
+                          await console.log ('final log', this.state.restaurants)
+                          
+                        
+                        }}
+                        >Select ths hotel
+                      </button> 
+                    </span>
+                    </h1>
                         <div className='address'>
                           <h2> address: {hotel.address.streetAddress} </h2>
                           <p> Zip Code: {hotel.address.postalCode} </p>
@@ -70,6 +109,11 @@ export default class Hotel extends Component {
                   </div>
                 )
             })}
+          {(this.state.restaurants)
+          ? <FoodInfo restaurants={this.state.restaurants}/>
+
+          : ''
+        } 
       </div>
     )
   }
