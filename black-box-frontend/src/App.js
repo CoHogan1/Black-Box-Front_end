@@ -136,11 +136,9 @@ class App extends Component {
         })
     }
 
-
     componentDidMount() {
         this.getVacations()
     }
-
 
     toggleAllVaca = () =>{
         //console.log("clicking");
@@ -170,6 +168,8 @@ class App extends Component {
                 <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } />
 
             <button onClick={this.toggleAllVaca}>View Recent Vacations</button>
+
+
             <button onClick={this.toggleShowAll}> test data</button>
 
             {this.state.toggleAllVaca &&
@@ -218,13 +218,11 @@ class App extends Component {
 
         {this.state.showAll &&
 
+
+
         <div className="hotelsDiv">
 
-
             <Hotel vaca={this.state.allVaca[this.state.allVaca.length-1]}/>
-
-
-
 
         </div>
 

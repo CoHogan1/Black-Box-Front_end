@@ -20,7 +20,7 @@ export default class Weather extends Component {
         fetch( apiUrl, {
     	"method": "GET",
     	"headers": {
-    		"x-rapidapi-key": "default-application-5200662",
+    		"x-rapidapi-key": "1100ee3563msh306384d3f712ffdp121f25jsncc28e308216a",
     		"x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
     	}
         })
