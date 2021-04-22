@@ -1,3 +1,5 @@
+
+/* Whole app----------------------------------------------------------------- */
 body{
     background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/giza-egypt-pyramids-in-sunset-scene-wonders-of-the-royalty-free-image-1588090115.jpg?crop=1xw:1xh;center,top&resize=980:*);
     background-repeat: no-repeat;
@@ -8,6 +10,9 @@ body{
 .App {
     text-align: center;
 }
+
+
+
 .nav {
     margin-top: 20px;
     background-color: rgba(0,0,0, 0.75);
@@ -24,8 +29,12 @@ body{
     border-radius: 10px;
     text-shadow: 0 0 10px black;
     margin-top: 10px;
-
 }
+
+
+
+
+
 .vacaData {
     background-color: rgba(0,0,0, 0.7);
     padding: 7px;
@@ -42,27 +51,17 @@ body{
 
 .vacationTable {
     margin: auto;
-    border: 2px solid yellow;
+    border: 2px solid gold;
+    background-color: black;
+    color:white;
+    border-radius: 3px;
+}
+.vacationTable> td {
+    width:10px;
 }
 
 .editForm {
     border: 2px solid red;
-}
-
-.hotelsDiv{
-    border: 2px solid cyan;
-}
-
-
-.WeatherDiv {
-    border: 2px solid black;
-}
-
-
-
-.ticketDiv{
-    border: 2px solid red;
-
 }
 .currentVaca {
     display: flex;
@@ -71,6 +70,11 @@ body{
     justify-content: space-around;
 
 }
+
+
+
+
+
 .hotelData {
     display: flex;
     flex-direction: row;
@@ -81,6 +85,18 @@ body{
     padding: 10px;
 }
 
+
+
+
+.restaurant {
+    border: 3px solid lime;
+}
+
+
+
+
+
+
 .allWeather{
     display: flex;
     flex-direction: row;
@@ -90,6 +106,11 @@ body{
     border: 2px solid green;
     padding: 10px;
 }
+
+
+
+
+
 
 input {
     width: 100px;
@@ -104,4 +125,55 @@ input {
     padding: 3px;
     margin-top: 15px;
     margin-bottom: 10px;
+}
+
+.vacaPreview{
+    border: 5px solid yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+
+
+
+
+.hotels {
+    border: 3px solid gold;
+    width: 270px;
+    background-color: black;
+    color:white;
+    margin: 5px;
+    overflow: hidden;
+}
+.hotelContainer{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.hotels>img {
+    height: 300px;
+    width: 300px;
+}
+.hotels> h1{
+    font-size: 20px;
+}
+
+.hotels> p {
+    font-size: 10px;
+}
+
+.hotelsDiv{
+    border: 2px solid cyan;
+    width: 47%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.WeatherDiv {
+    border: 2px solid black;
+    width: 40%;
 }

@@ -9,7 +9,7 @@ import Weather from './weather'
 let baseURL = ''
 
 if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://localhost:3003'
+  baseURL = 'http://localhost:3003' 
 } else {
   baseURL = 'heroku url here'
 }
@@ -89,9 +89,9 @@ class App extends Component {
             method: 'PUT',
             body: JSON.stringify({
                name: e.target.name.value,
-               location: e.target.location.values,
-               dateFrom: e.target.dateFrom.values,
-               dateTo: e.target.dateTo.values,
+               location: e.target.location.value,
+               dateFrom: e.target.dateFrom.value,
+               dateTo: e.target.dateTo.value,
             }),
             headers: {
               'Content-Type' : 'application/json'
@@ -164,13 +164,17 @@ class App extends Component {
         return (
             <div className="App">
 
-            { this.state.allVaca.length > 0 && <Nav thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>}
+                <div className="nav">
+                    { this.state.allVaca.length > 0 && <Nav thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>}
 
-            <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } />
+                </div>
 
-            <button onClick={this.toggleAllVaca}>View Recent Vacations</button>
 
-            <button onClick={this.toggleShowAll}>View Hotels</button>
+            <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } /><br></br>
+
+            <button className="searchInput" onClick={this.toggleAllVaca}>View Recent Vacations</button><br></br><br></br>
+
+            <button className="searchInput" onClick={this.toggleShowAll}>View Vacation</button>
 
             {this.state.toggleAllVaca &&
             <div>
@@ -212,8 +216,13 @@ class App extends Component {
         </div>
         }
 
+        <div className="vacaPreview">
+
+
+
+
         {this.state.showAll &&
-            
+
         <div className="hotelsDiv">
             <Hotel vaca={this.state.allVaca[this.state.allVaca.length-1]}/>
 
@@ -228,6 +237,14 @@ class App extends Component {
 
         </div>
         }
+
+
+        </div>
+
+
+
+
+
 
         </div>
         )

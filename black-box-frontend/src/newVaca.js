@@ -78,7 +78,7 @@ export default class VacationForm extends Component {
                     <label>Date To:</label>
                     <input name="dateTo" id="dateTo" onChange={(evt)=> this.handleChange(evt)} value={this.state.dateTo}></input><br></br>
 
-                    <input className="searchInput" type="submit" value="Search"></input>
+                    <input className="searchInput" type="submit" value="Set Destination"></input>
                 </form>
             </div>
         )
