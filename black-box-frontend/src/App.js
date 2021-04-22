@@ -224,7 +224,7 @@ class App extends Component {
 
         {this.state.showAll &&
         <div className="WeatherDiv">Weather
-            <Weather vaca={this.state.allVaca[this.state.allVaca.length -1]}/>
+            <Weather vaca={this.state.allVaca[this.state.allVaca.length-1]}/>
 
         </div>
         }
