@@ -42,7 +42,7 @@ class App extends Component {
                     dateTo: '',
                 })
         })
-        //console.log(this.state.allVaca + " here")
+        console.log(this.state.allVaca + " here")
     }
 
     addVaca = (newVaca) => {
