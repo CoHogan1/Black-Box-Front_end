@@ -9,7 +9,7 @@ import Weather from './weather'
 let baseURL = ''
 
 if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://localhost:3003' 
+  baseURL = 'http://localhost:3003'
 } else {
   baseURL = 'heroku url here'
 }
@@ -165,14 +165,17 @@ class App extends Component {
             <div className="App">
 
                 <div className="nav">
+                    <button className="searchInput" onClick={this.toggleAllVaca}>View Recent Vacations</button><br></br><br></br>
+
                     { this.state.allVaca.length > 0 && <Nav thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>}
+
+
 
                 </div>
 
 
             <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } /><br></br>
 
-            <button className="searchInput" onClick={this.toggleAllVaca}>View Recent Vacations</button><br></br><br></br>
 
             <button className="searchInput" onClick={this.toggleShowAll}>View Vacation</button>
 
