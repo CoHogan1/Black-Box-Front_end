@@ -1,6 +1,6 @@
 import './App.css'
 import React, { Component } from 'react'
-//import Nav from './nav'
+import Nav from './nav'
 import Navu from './Navu'
 import VacationForm from './newVaca'
 import Hotel from './hotels'
@@ -141,7 +141,6 @@ class App extends Component {
         this.getVacations()
     }
 
-
     toggleAllVaca = () =>{
         //console.log("clicking");
         this.setState({
@@ -149,7 +148,6 @@ class App extends Component {
         })
         // console.log(this.state.showAll)
     }
-
 
     toggleShowAll = () => {
         //console.log('clicked')
@@ -159,114 +157,84 @@ class App extends Component {
     }
 
 
-
     render() {
         //console.log(this.state.allVaca)
         return (
             <div className="App">
 
-<<<<<<< HEAD
                 <div className="nav">
-                <img id='logo'src="../logo.png"/> 
+                <img id='logo'src="../logo.png"/>
                     { this.state.allVaca.length > 0 && <Nav thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>}
-=======
+
                 <Navu toggleHead={this.toggleShowAll}/>
->>>>>>> e7d3703b2ed188a296318337aaa3822a060877d3
 
                 <header id="head">
                     <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>
 
-                {/* { this.state.allVaca.length > 0 &&
-                    <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>
-
-<<<<<<< HEAD
-            <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } /><br></br>
-            <div className='other-btn'>
-            <button id='obtn1' className="searchInput" onClick={this.toggleAllVaca}>Recent Vacations</button><br></br><br></br>
-
-            <button id='obtn2'className="searchInput" onClick={this.toggleShowAll}>View Hotels</button>
-            </div>
-=======
-                    <Nav thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>
-                } */}
 
                 </header>
-
-
-
+                </div>
 
 
             <button onClick={this.toggleAllVaca}>View Recent Vacations</button>
             <button onClick={this.toggleShowAll}> test data</button>
 
->>>>>>> e7d3703b2ed188a296318337aaa3822a060877d3
+
             {this.state.toggleAllVaca &&
+
             <div>
+                <table className="vacationTable">
+                  <tbody>
+                    {this.state.allVaca.map(vaca => {
+                        return (
+                            <tr key={vaca._id}>
+                                <td>{vaca.name}</td>
+                                <td>{vaca.location}</td>
+                                <td>{vaca.dateFrom}</td>
+                                <td>{vaca.dateTo}</td>
+                                <td onClick={ ()=> this.deleteVaca(vaca._id) }>~Delete~</td>
+                                <td onClick={ ()=> this.showEdit(vaca)}>Edit:</td>
+                            </tr>
+                        )
+                    })
+                    }
+                  </tbody>
+                </table><br/>
 
-            <table className="vacationTable">
-              <tbody>
-                {this.state.allVaca.map(vaca => {
-                    return (
-                        <tr key={vaca._id}>
-                            <td>{vaca.name}</td>
-                            <td>{vaca.location}</td>
-                            <td>{vaca.dateFrom}</td>
-                            <td>{vaca.dateTo}</td>
-                            <td onClick={ ()=> this.deleteVaca(vaca._id) }>~Delete~</td>
-                            <td onClick={ ()=> this.showEdit(vaca)}>Edit:</td>
-                        </tr>
-                    )
-                })
+                {this.state.showModal &&
+
+                    <form onSubmit={this.handleSubmit} className="editForm">
+                        <h1>This form edits vacation</h1>
+                        <h1>Edit:</h1>
+                        <label>Name:</label>
+                        <input name="name"  value={this.state.name} onChange={this.handleChange} ></input><br></br>
+                        <label>location:</label>
+                        <input name="location" value={this.state.location} onChange={this.handleChange} ></input><br></br>
+                        <label>Date From:</label>
+                        <input name="dateFrom"  value={this.state.dateFrom} onChange={this.handleChange} ></input><br></br>
+                        <label>Date To:</label>
+                        <input name="dateTo" value={this.state.dateTo} onChange={this.handleChange} ></input><br></br>
+                        <input type="submit" value="Update"></input>
+                    </form>
                 }
-              </tbody>
-            </table><br/>
-
-            {this.state.showModal &&
-
-                <form onSubmit={this.handleSubmit} className="editForm">
-                    <h1>This form edits vacation</h1>
-                    <h1>Edit:</h1>
-                    <label>Name:</label>
-                    <input name="name"  value={this.state.name} onChange={this.handleChange} ></input><br></br>
-                    <label>location:</label>
-                    <input name="location" value={this.state.location} onChange={this.handleChange} ></input><br></br>
-                    <label>Date From:</label>
-                    <input name="dateFrom"  value={this.state.dateFrom} onChange={this.handleChange} ></input><br></br>
-                    <label>Date To:</label>
-                    <input name="dateTo" value={this.state.dateTo} onChange={this.handleChange} ></input><br></br>
-                    <input type="submit" value="Update"></input>
-                </form>
-            }
-        </div>
+            </div>
         }
 
         <div className="vacaPreview">
+            {this.state.showAll &&
+            <div className="hotelsDiv">
+                <Hotel vaca={this.state.allVaca[this.state.allVaca.length-1]}/>
 
+            </div>
+            }
 
+            {this.state.showAll &&
+            <div className="WeatherDiv">
+                <Weather vaca={this.state.allVaca[this.state.allVaca.length-1]}/>
 
-
-        {this.state.showAll &&
-
-        <div className="hotelsDiv">
-            <Hotel vaca={this.state.allVaca[this.state.allVaca.length-1]}/>
-
+            </div>
+            }
         </div>
-        }
-
-
-
-        {this.state.showAll &&
-        <div className="WeatherDiv">
-            <Weather vaca={this.state.allVaca[this.state.allVaca.length-1]}/>
-
-        </div>
-        }
-
-
-        </div>
-
-
-
 
 
 

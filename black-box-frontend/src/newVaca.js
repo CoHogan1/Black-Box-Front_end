@@ -59,7 +59,7 @@ export default class VacationForm extends Component {
                 dateFrom: '',
                 dateTo: '',
               })
-              //console.log(this.state.name);
+              //console.log(this.state.name)
             }).catch (error => console.error({'Error': error}))
 
         }
@@ -70,56 +70,53 @@ export default class VacationForm extends Component {
 
                 <span className="logo">Logo</span>
 
-
             {this.state.toggle ?
                 <form onSubmit={this.handleSubmit} className="addNewVacationForm">
-<<<<<<< HEAD
+
                     <h1 className ='welcome'>Welcome Aboard</h1>
-                   
+
                     <input className='new' placeholder='Occassion'name="name" id="name" onChange={(evt)=> this.handleChange(evt)} value={this.state.name}></input>
-=======
+
                     <h1>Start your Vacation</h1>
-                        <label>Name:</label>
-                        <input name="name" id="name" onChange={(evt)=> this.handleChange(evt)} value={this.state.name} />
->>>>>>> e7d3703b2ed188a296318337aaa3822a060877d3
+                    <label></label>
+                    <input name="name" id="name" onChange={(evt)=> this.handleChange(evt)} value={this.state.name}></input>
+
 
                     <label></label>
                     <input className='new' placeholder='location' name="location" id="location" onChange={(evt)=> this.handleChange(evt)} value={this.state.location}></input>
 
                     <label></label>
-                    <input className='new' placeholder='Check in date:       YYYY-DD-MM'name="dateFrom"id="dateFrom"  onChange={(evt)=> this.handleChange(evt)} value={this.state.dateFrom}></input>
+                    <input className='new' placeholder='Check in date: YYYY-DD-MM' name="dateFrom"id="dateFrom"  onChange={(evt)=> this.handleChange(evt)} value={this.state.dateFrom}></input>
 
                     <label></label>
-                    <input className='new'placeholder='Check out date:      YYYY-DD-MM' name="dateTo" id="dateTo" onChange={(evt)=> this.handleChange(evt)} value={this.state.dateTo}></input><br></br>
+                    <input className='new'placeholder='Check out date: YYYY-DD-MM' name="dateTo" id="dateTo" onChange={(evt)=> this.handleChange(evt)} value={this.state.dateTo}></input><br></br>
 
-<<<<<<< HEAD
+
                     <input id='main-submit' className="searchInput" type="submit" value="Set Destination"></input>
-=======
+
                     <input className="searchInput" type="submit" value="Search"></input>
 
->>>>>>> e7d3703b2ed188a296318337aaa3822a060877d3
+
                 </form>
                 :
                 null
                 }
 
 
-
-
-
-
-
-{/* {this.state.currentVacation !== '' &&
-
-<div className="currentVaca">
-    <div className="vacaData" >Name: {this.state.currentVacation.name}</div>
-    <div className="vacaData" >Where: {this.state.currentVacation.location}</div>
-    <div className="vacaData" >From: {this.state.currentVacation.dateFrom}</div>
-    <div className="vacaData" >To: {this.state.currentVacation.dateTo}</div>
-</div>
-} */}
-
             </div>
         )
     }
 }
+
+
+
+
+// /* {this.state.currentVacation !== '' &&
+//
+// <div className="currentVaca">
+// <div className="vacaData" >Name: {this.state.currentVacation.name}</div>
+// <div className="vacaData" >Where: {this.state.currentVacation.location}</div>
+// <div className="vacaData" >From: {this.state.currentVacation.dateFrom}</div>
+// <div className="vacaData" >To: {this.state.currentVacation.dateTo}</div>
+// </div>
+// } */
