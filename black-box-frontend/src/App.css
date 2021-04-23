@@ -1,20 +1,77 @@
+<<<<<<< HEAD
 
 /* Whole app----------------------------------------------------------------- */
 body{
     background-color: ##f8f9fa;
     color:#EEEEEE;
     /*background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/giza-egypt-pyramids-in-sunset-scene-wonders-of-the-royalty-free-image-1588090115.jpg?crop=1xw:1xh;center,top&resize=980:*);*/
+=======
+/* /* body{
+    background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/giza-egypt-pyramids-in-sunset-scene-wonders-of-the-royalty-free-image-1588090115.jpg?crop=1xw:1xh;center,top&resize=980:*);
+>>>>>>> e7d3703b2ed188a296318337aaa3822a060877d3
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: ;
+} */
+
+body{
+    margin: 0;
+    padding:0;
+    height: 100%;
+
+    
 }
 
 .App {
     text-align: center;
+    scroll-behavior: smooth;
 }
 
+#head{
+    /* background-image: url('./images/clouds.jpg') ; */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height:50vh;
+    position: relative;
+}
 
+.nav-bar {
+    background-color: rgb(231, 100, 77);
+    color:white;
+    display:flex;
+    justify-content:center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 70px;
+    align-items: center;
 
+ 
+}
+
+.nav-links{
+    display: flex;
+    justify-content: right;
+    margin-right: 0;
+    width: 30%;
+    list-style-type: none;
+
+}
+.nav-links li{
+    padding: 10px;
+    
+}
+
+.home{
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: left;
+    margin-left: 10%;
+}
+
+<<<<<<< HEAD
 .nav {
     /*margin-top: 20px;*/
     background-color: #EEC218;
@@ -23,6 +80,14 @@ body{
 
     /*color: gold;*/
     height: 5%;
+=======
+nav {
+    margin-top: 20px;
+    background-color: rgba(8, 8, 8, 0.75);
+    padding: 5px;
+    color: gold;
+    height: 25%;
+>>>>>>> e7d3703b2ed188a296318337aaa3822a060877d3
 }
 .nav > h1 {
     /*text-align: center;*/
@@ -45,11 +110,13 @@ body{
     padding: 7px;
     /*border: 2px solid gold;*/
     border-radius: 5px;
+    
     color:silver;
     /*text-shadow: 0 0  20px black;*/
     margin-top: 500px;
 }
 .addNewVacationForm {
+<<<<<<< HEAD
     /*border: 2px solid green;*/
     /*background-color: rgba(250,250,250, 0.5);*/
     padding-top: 60px;
@@ -58,7 +125,32 @@ body{
     background-size:cover;
     margin-top: 0px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+=======
+    /* border: 2px solid green; */
+    background-color: rgba(250,250,250, 0.5);
+    padding:20px;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+
+>>>>>>> e7d3703b2ed188a296318337aaa3822a060877d3
 }
+
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid rgb(214, 218, 33);
+  border-radius: 15px;
+}
+input:focus {
+  /* the outline property selects the default blue border that shows up on inputs. giving it a value of 0 gets rid of it */
+  outline: 0;
+  border: 2px solid black;
+}
+
 
 .vacationTable {
     margin: auto;
@@ -81,6 +173,8 @@ body{
     justify-content: space-around;
 
 }
+
+
 
 
 

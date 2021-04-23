@@ -1,15 +1,16 @@
 import './App.css'
 import React, { Component } from 'react'
-import Nav from './nav'
+//import Nav from './nav'
+import Navu from './Navu'
 import VacationForm from './newVaca'
 import Hotel from './hotels'
 import Weather from './weather'
 
-//console.log(process.env.NODE_ENV)
+console.log(process.env.NODE_ENV)
 let baseURL = ''
 
 if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://localhost:3003' 
+  baseURL = 'http://localhost:3003' // mmarcus uses 3001, or 3000
 } else {
   baseURL = 'heroku url here'
 }
@@ -146,7 +147,7 @@ class App extends Component {
         this.setState({
             toggleAllVaca: !this.state.toggleAllVaca
         })
-        //console.log(this.state.showAll)
+        // console.log(this.state.showAll)
     }
 
 
@@ -164,19 +165,41 @@ class App extends Component {
         return (
             <div className="App">
 
+<<<<<<< HEAD
                 <div className="nav">
                 <img id='logo'src="../logo.png"/> 
                     { this.state.allVaca.length > 0 && <Nav thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>}
+=======
+                <Navu toggleHead={this.toggleShowAll}/>
+>>>>>>> e7d3703b2ed188a296318337aaa3822a060877d3
 
-                </div>
+                <header id="head">
+                    <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>
 
+                {/* { this.state.allVaca.length > 0 &&
+                    <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>
 
+<<<<<<< HEAD
             <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } /><br></br>
             <div className='other-btn'>
             <button id='obtn1' className="searchInput" onClick={this.toggleAllVaca}>Recent Vacations</button><br></br><br></br>
 
             <button id='obtn2'className="searchInput" onClick={this.toggleShowAll}>View Hotels</button>
             </div>
+=======
+                    <Nav thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>
+                } */}
+
+                </header>
+
+
+
+
+
+            <button onClick={this.toggleAllVaca}>View Recent Vacations</button>
+            <button onClick={this.toggleShowAll}> test data</button>
+
+>>>>>>> e7d3703b2ed188a296318337aaa3822a060877d3
             {this.state.toggleAllVaca &&
             <div>
 
