@@ -124,6 +124,10 @@ class App extends Component {
     componentDidMount() {
         this.getVacations()
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
     toggleAllVaca = () =>{
         //console.log("clicking");
         this.setState({
@@ -131,16 +135,26 @@ class App extends Component {
         })
         // console.log(this.state.showAll)
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
     toggleShowAll = () => {
         //console.log('clicked')
         this.setState({
             showAll: !this.state.showAll
         })
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
     render() {
         //console.log(this.state.allVaca)
         return (
             <div className="App">
+<<<<<<< HEAD
                 <div className="nav">
                 <img id='logo'src="../logo.png"/>
                     { this.state.allVaca.length > 0 && <Nav thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>}
@@ -152,6 +166,29 @@ class App extends Component {
             <button onClick={this.toggleAllVaca}>View Recent Vacations</button>
             <button onClick={this.toggleShowAll}> test data</button>
             {this.state.toggleAllVaca &&
+=======
+
+                <div className="nav">
+                <img id='logo'src="../logo.png"/>
+                    { this.state.allVaca.length > 0 && <Nav thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>}
+
+                <Navu toggleHead={this.toggleShowAll}/>
+
+                <header id="head">
+                    <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>
+
+
+                </header>
+                </div>
+
+
+            <button onClick={this.toggleAllVaca}>View Recent Vacations</button>
+            <button onClick={this.toggleShowAll}> test data</button>
+
+
+            {this.state.toggleAllVaca &&
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
             <div>
                 <table className="vacationTable">
                   <tbody>
@@ -170,7 +207,13 @@ class App extends Component {
                     }
                   </tbody>
                 </table><br/>
+<<<<<<< HEAD
                 {this.state.showModal &&
+=======
+
+                {this.state.showModal &&
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
                     <form onSubmit={this.handleSubmit} className="editForm">
                         <h1>This form edits vacation</h1>
                         <h1>Edit:</h1>
@@ -191,6 +234,7 @@ class App extends Component {
             {this.state.showAll &&
             <div className="hotelsDiv">
                 <Hotel vaca={this.state.allVaca[this.state.allVaca.length-1]}/>
+<<<<<<< HEAD
             </div>
             }
             {this.state.showAll &&
@@ -199,6 +243,22 @@ class App extends Component {
             </div>
             }
         </div>
+=======
+
+            </div>
+            }
+
+            {this.state.showAll &&
+            <div className="WeatherDiv">
+                <Weather vaca={this.state.allVaca[this.state.allVaca.length-1]}/>
+
+            </div>
+            }
+        </div>
+
+
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
         </div>
         )
     }

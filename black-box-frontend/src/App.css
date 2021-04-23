@@ -4,6 +4,10 @@ body{
     background-color: ##f8f9fa;
     color:#EEEEEE;
     /*background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/giza-egypt-pyramids-in-sunset-scene-wonders-of-the-royalty-free-image-1588090115.jpg?crop=1xw:1xh;center,top&resize=980:*);*/
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 /* /* body{
     background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/giza-egypt-pyramids-in-sunset-scene-wonders-of-the-royalty-free-image-1588090115.jpg?crop=1xw:1xh;center,top&resize=980:*);
 >>>>>>> e7d3703b2ed188a296318337aaa3822a060877d3
@@ -12,10 +16,19 @@ body{
     background-color: ;
 } */
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 body{
     margin: 0;
     padding:0;
     height: 100%;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 }
 .App {
     text-align: center;
@@ -40,6 +53,11 @@ body{
     width: 100%;
     height: 70px;
     align-items: center;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 }
 .nav-links{
     display: flex;
@@ -50,6 +68,10 @@ body{
 }
 .nav-links li{
     padding: 10px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 }
 .home{
     display: flex;
@@ -57,6 +79,11 @@ body{
     justify-content: left;
     margin-left: 10%;
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 .nav {
     /*margin-top: 20px;*/
     background-color: #EEC218;
@@ -65,17 +92,29 @@ body{
     /*color: gold;*/
     height: 5%;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 nav {
     margin-top: 20px;
     background-color: rgba(8, 8, 8, 0.75);
     padding: 5px;
     color: gold;
     height: 25%;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 }
 .nav > h1 {
     /*text-align: center;*/
     margin: auto;
     background-color: #EEC218;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
     width: 50%;
     border-radius: 10px;
     text-shadow: 0 0 10px black;
@@ -87,11 +126,19 @@ nav {
     padding: 7px;
     /*border: 2px solid gold;*/
     border-radius: 5px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
     color:silver;
     /*text-shadow: 0 0  20px black;*/
     margin-top: 500px;
 }
 .addNewVacationForm {
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
     /*border: 2px solid green;*/
     /*background-color: rgba(250,250,250, 0.5);*/
     padding-top: 60px;
@@ -100,6 +147,10 @@ nav {
     background-size:cover;
     margin-top: 0px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
     /* border: 2px solid green; */
     background-color: rgba(250,250,250, 0.5);
     padding:20px;
@@ -107,6 +158,11 @@ nav {
     bottom: 30px;
     width: 100%;
     border-radius: 0 10px 10px 0;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 }
 input {
   width: 100%;
@@ -150,6 +206,11 @@ input:focus {
     border: 3px solid black;
     padding: 10px;
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 .restaurant {
     border: 3px solid lime;
 }
@@ -197,6 +258,12 @@ input {
     left: 0;
     z-index: 5;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 }
 .vacaPreview{
     /*border: 5px solid yellow;*/
