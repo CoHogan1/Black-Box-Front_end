@@ -64,12 +64,10 @@ export default class VacationForm extends Component {
               })
               //console.log(this.state.name);
             }).catch (error => console.error({'Error': error}))
-            this.setState({
-                toggle: !this.state.toggle
-            })
-            console.log(this.state.name)
-            console.log(this.state.toggle)
-            //window.location.reload(false)// https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react
+         
+            // console.log(this.state.name)
+            // console.log(this.state.toggle)
+            // //window.location.reload(false)// https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react
         }
 
     render() {
@@ -101,6 +99,12 @@ export default class VacationForm extends Component {
                 null
                 }
 
+
+
+
+
+
+
 {/* {this.state.currentVacation !== '' &&
 
 <div className="currentVaca">
@@ -110,8 +114,6 @@ export default class VacationForm extends Component {
     <div className="vacaData" >To: {this.state.currentVacation.dateTo}</div>
 </div>
 } */}
-
-
 
             </div>
         )

@@ -8,52 +8,42 @@ export default class Weather extends Component {
         this.state = {
             vaca: this.props.vaca,
             query: this.props.vaca.location,
+            weather: []
         }
     }
 
-    dataCheck = () =>{
-        console.log("clicked")
-        console.log(this.state.query)
-        const query = this.state.query.toLowerCase()
-        const apiUrl = "https://community-open-weather-map.p.rapidapi.com/find?q=" + query + "&cnt=0&mode=null&lon=0&type=link%2C%20accurate&lat=0&units=imperial%2C%20metric"
-        console.log(apiUrl);
-        fetch( apiUrl, {
-    	"method": "GET",
-    	"headers": {
-    		"x-rapidapi-key": "default-application-5200662",
-    		"x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
-    	}
+    fetchWeather = () =>{
+       fetch(`https://community-open-weather-map.p.rapidapi.com/forecast?q=${this.state.query}`, {
+            "method": "GET",
+            "headers": {
+            "x-rapidapi-key": "5168948a50msh664513c5262f841p1e6c29jsn7b3a056e3cea",
+            "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
+            }
         })
-        .then(response => {
-        	console.log(response);
+        .then(response => response.json())
+        .then(json => {
+            
+            console.log(' response', json)
         })
         .catch(err => {
-        	console.error(err);
+            console.error(err);
         });
+    }
 
+    componentDidMount() {
+        this.fetchWeather()
     }
 
 
-    render(){
+
+    render() {
+        console.log('weather in r', this.state.weather)
         return (
-            <div className="allWeather">
-                <div className="days">
-                    <button onClick={this.dataCheck}>here</button>
-                    <p>{this.state.vaca.name}</p>
-                    <p>{this.state.vaca.location}</p>
-                    <p>{this.state.vaca.dateFrom}</p>
-                    <p>{this.state.vaca.dateTo}</p>
-                </div>
-            </div>
-        )
-    }
+          <h1> weather </h1>
+        ) 
+    }            
+
 }
 
 
 
-// api key
-
-
-//  0f582a0705359296dafbeafebc8d12a2
-
-// api.openweathermap.org/data/2.5/weather?q={city name}&appid=0f582a0705359296dafbeafebc8d12a2
