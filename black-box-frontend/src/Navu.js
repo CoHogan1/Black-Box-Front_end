@@ -12,7 +12,7 @@ export default class Navu extends Component {
             showAll: false,
             toggleAllVaca: false,
         }
-  
+
     }
 
     toggleAllVaca = () =>{
@@ -29,7 +29,7 @@ export default class Navu extends Component {
             showAll: !this.state.showAll
         })
     }
-   
+
 
     render(props) {
         return(
@@ -38,10 +38,10 @@ export default class Navu extends Component {
                 <div className="nav-bar">
 
                     <div className="home">
-                    <a href ="#" className="home">Home</a>
+                    <p className="home">Home</p>
 
                     </div>
-                   
+
                     <ul className="nav-links">
                         <li onClick={this.toggleShowAll}>View Recent Vacations</li>
                          <li>SignIn</li>

@@ -2,9 +2,6 @@
 //it will need to be displayed on the landing page.
 import './App.css'
 import React, { Component } from 'react'
-import { Button, Checkbox, Form } from 'semantic-ui-react'
-
-
 
 
 export default class VacationForm extends Component {
@@ -64,10 +61,7 @@ export default class VacationForm extends Component {
               })
               //console.log(this.state.name);
             }).catch (error => console.error({'Error': error}))
-         
-            // console.log(this.state.name)
-            // console.log(this.state.toggle)
-            // //window.location.reload(false)// https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react
+
         }
 
     render() {
@@ -82,7 +76,7 @@ export default class VacationForm extends Component {
                     <h1>Start your Vacation</h1>
                         <label>Name:</label>
                         <input name="name" id="name" onChange={(evt)=> this.handleChange(evt)} value={this.state.name} />
-               
+
                     <label>location:</label>
                     <input name="location" id="location" onChange={(evt)=> this.handleChange(evt)} value={this.state.location}></input>
 

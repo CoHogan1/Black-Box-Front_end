@@ -1,6 +1,6 @@
 import './App.css'
 import React, { Component } from 'react'
-import Nav from './nav'
+//import Nav from './nav'
 import Navu from './Navu'
 import VacationForm from './newVaca'
 import Hotel from './hotels'
@@ -10,7 +10,7 @@ console.log(process.env.NODE_ENV)
 let baseURL = ''
 
 if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://localhost:3001'
+  baseURL = 'http://localhost:3003' // mmarcus uses 3001, or 3000
 } else {
   baseURL = 'heroku url here'
 }
@@ -179,12 +179,12 @@ class App extends Component {
                 </header>
 
 
-              
+
 
 
             <button onClick={this.toggleAllVaca}>View Recent Vacations</button>
             <button onClick={this.toggleShowAll}> test data</button>
-            
+
             {this.state.toggleAllVaca &&
             <div>
 
