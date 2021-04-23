@@ -2,6 +2,9 @@
 //it will need to be displayed on the landing page.
 import './App.css'
 import React, { Component } from 'react'
+import { Button, Checkbox, Form } from 'semantic-ui-react'
+
+
 
 
 export default class VacationForm extends Component {
@@ -13,6 +16,8 @@ export default class VacationForm extends Component {
             dateFrom: '',
             dateTo: '',
             toggle: true,
+            currentVacation: this.props.thisIsAProp
+
         }
     }
 
@@ -70,13 +75,16 @@ export default class VacationForm extends Component {
     render() {
         return(
             <div>
+
+                <span className="logo">Logo</span>
+
+
             {this.state.toggle ?
                 <form onSubmit={this.handleSubmit} className="addNewVacationForm">
                     <h1>Start your Vacation</h1>
-
-                    <label>Name:</label>
-                    <input name="name" id="name" onChange={(evt)=> this.handleChange(evt)} value={this.state.name}></input>
-
+                        <label>Name:</label>
+                        <input name="name" id="name" onChange={(evt)=> this.handleChange(evt)} value={this.state.name} />
+               
                     <label>location:</label>
                     <input name="location" id="location" onChange={(evt)=> this.handleChange(evt)} value={this.state.location}></input>
 
@@ -93,9 +101,15 @@ export default class VacationForm extends Component {
                 null
                 }
 
+{/* {this.state.currentVacation !== '' &&
 
-
-
+<div className="currentVaca">
+    <div className="vacaData" >Name: {this.state.currentVacation.name}</div>
+    <div className="vacaData" >Where: {this.state.currentVacation.location}</div>
+    <div className="vacaData" >From: {this.state.currentVacation.dateFrom}</div>
+    <div className="vacaData" >To: {this.state.currentVacation.dateTo}</div>
+</div>
+} */}
 
 
 

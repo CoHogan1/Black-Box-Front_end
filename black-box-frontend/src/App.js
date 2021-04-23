@@ -1,15 +1,16 @@
 import './App.css'
 import React, { Component } from 'react'
 import Nav from './nav'
+import Navu from './Navu'
 import VacationForm from './newVaca'
 import Hotel from './hotels'
 import Weather from './weather'
 
-//console.log(process.env.NODE_ENV)
+console.log(process.env.NODE_ENV)
 let baseURL = ''
 
 if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://localhost:3003'
+  baseURL = 'http://localhost:3001'
 } else {
   baseURL = 'heroku url here'
 }
@@ -147,7 +148,7 @@ class App extends Component {
         this.setState({
             toggleAllVaca: !this.state.toggleAllVaca
         })
-        //console.log(this.state.showAll)
+        // console.log(this.state.showAll)
     }
     toggleShowAll = () => {
         console.log('clicked')
@@ -163,15 +164,26 @@ class App extends Component {
         return (
             <div className="App">
 
-                { this.state.allVaca.length > 0 &&
-                    <Nav thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>
-                }
+                <Navu toggleHead={this.toggleShowAll}/>
 
-                <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } />
+                <header id="head">
+                    <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>
+
+                {/* { this.state.allVaca.length > 0 &&
+                    <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>
+
+                    <Nav thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>
+                } */}
+
+                </header>
+
+
+              
+
 
             <button onClick={this.toggleAllVaca}>View Recent Vacations</button>
             <button onClick={this.toggleShowAll}> test data</button>
-
+            
             {this.state.toggleAllVaca &&
             <div>
             <table className="vacationTable">
@@ -221,7 +233,7 @@ class App extends Component {
         <div className="hotelsDiv">
 
 
-            <Hotel vaca={this.state.allVaca[this.state.allVaca.length-1]}/>
+            <Hotel vaca={this.state.allVaca [this.state.allVaca.length-1] }/>
 
 
 
