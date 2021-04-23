@@ -1,7 +1,9 @@
 
 /* Whole app----------------------------------------------------------------- */
 body{
-    background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/giza-egypt-pyramids-in-sunset-scene-wonders-of-the-royalty-free-image-1588090115.jpg?crop=1xw:1xh;center,top&resize=980:*);
+    background-color: ##f8f9fa;
+    color:#EEEEEE;
+    /*background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/giza-egypt-pyramids-in-sunset-scene-wonders-of-the-royalty-free-image-1588090115.jpg?crop=1xw:1xh;center,top&resize=980:*);*/
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: ;
@@ -14,21 +16,24 @@ body{
 
 
 .nav {
-    margin-top: 20px;
-    background-color: rgba(0,0,0, 0.75);
-    padding: 5px;
-    color: gold;
-    height: 25%;
+    /*margin-top: 20px;*/
+    background-color: #EEC218;
+    /*padding: 50px;*/
+    /*padding-bottom: 10px;*/
+
+    /*color: gold;*/
+    height: 5%;
 }
 .nav > h1 {
-    text-align: center;
+    /*text-align: center;*/
     margin: auto;
-    background-color: rgba(255,255,255, 0.2);
-    font-size: 50px;
+    background-color: #EEC218;
+    
     width: 50%;
     border-radius: 10px;
     text-shadow: 0 0 10px black;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
+    padding-bottom: 10px;
 }
 
 
@@ -38,20 +43,26 @@ body{
 .vacaData {
     background-color: rgba(0,0,0, 0.7);
     padding: 7px;
-    border: 2px solid gold;
+    /*border: 2px solid gold;*/
     border-radius: 5px;
     color:silver;
-    text-shadow: 0 0  20px black;
-    margin-top: 25px;
+    /*text-shadow: 0 0  20px black;*/
+    margin-top: 500px;
 }
 .addNewVacationForm {
-    border: 2px solid green;
-    background-color: rgba(250,250,250, 0.5);
+    /*border: 2px solid green;*/
+    /*background-color: rgba(250,250,250, 0.5);*/
+    padding-top: 60px;
+    padding-bottom: 180px;
+    background-image: url(./clouds.jpg);
+    background-size:cover;
+    margin-top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .vacationTable {
     margin: auto;
-    border: 2px solid gold;
+    /*border: 2px solid gold;*/
     background-color: black;
     color:white;
     border-radius: 3px;
@@ -113,22 +124,51 @@ body{
 
 
 input {
-    width: 100px;
+    width: 250px;
+    /*background: #EEc218;*/
+  /*border: none;*/
+  /*border-radius: 1px;*/
+  /*height: 25px;*/
+  margin-left: 10px;
+  border-radius: 15px;
+    border: 1px #000 solid;
+    padding: 5px 5px 5px 25px;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    z-index: 5;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+
 }
 
 .searchInput{
-    height: 30px;
-    border-radius: 4px;
-    border: 3px solid gold;
-    color:white;
-    background-color: black;
-    padding: 3px;
-    margin-top: 15px;
-    margin-bottom: 10px;
+ background:rgba(0,0,0,0.1);
+ color: black;
+ font-family: cinzil;
+ /*font-size: 14px;*/
+ font-weight: bold;
+  /*border: none;*/
+  /*border-radius: 1px;*/
+  width: 140px;
+  height: 30px;
+  margin-left: 10px;
+  text-align: center;
+
+    border: 3px white solid;
+    padding: 18px;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    z-index: 5;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    
+
+
 }
 
 .vacaPreview{
-    border: 5px solid yellow;
+    /*border: 5px solid yellow;*/
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -140,12 +180,12 @@ input {
 
 
 .hotels {
-    border: 3px solid gold;
+    /*border: 3px solid gold;*/
     width: 270px;
     background-color: black;
     color:white;
     margin: 5px;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .hotelContainer{
     display:flex;
@@ -167,7 +207,7 @@ input {
 }
 
 .hotelsDiv{
-    border: 2px solid cyan;
+    /*border: 2px solid cyan;*/
     width: 47%;
     display: flex;
     flex-direction: row;
@@ -176,4 +216,51 @@ input {
 .WeatherDiv {
     border: 2px solid black;
     width: 40%;
+}
+
+#logo {
+    height: 102px;
+    width: 102px;
+    border-radius: 3px;
+    margin-bottom: 0;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+}
+.other-btns {
+    display: flex;
+    flex-direction: row;
+    /*margin-bottom: 40px;*/
+}
+
+#obtn1 {
+    /*margin-bottom: 60px;*/
+    position: absolute;
+    margin-top: 33%;
+
+}
+
+#obtn2 {
+     position: absolute;
+    margin-top: 33%;
+    margin-left: 13%; 
+    /*margin-top: 60%;*/
+
+
+}
+
+#main-submit {
+    /*padding-top: 30px;*/
+    margin-top: 30px;
+    /*margin-left: 80   %;*/
+}
+
+.new {
+    margin-top: 40px;
+    font-family: cinzil;
+}
+
+.welcome {
+    color:black;
+    font-family: cinzil;
+     font-weight: bold 
 }

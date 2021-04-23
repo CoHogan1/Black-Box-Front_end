@@ -65,20 +65,20 @@ export default class VacationForm extends Component {
         return(
             <div>
                 <form onSubmit={this.handleSubmit} className="addNewVacationForm">
-                    <h1>Start your Vacation</h1>
-                    <label>Name:</label>
-                    <input name="name" id="name" onChange={(evt)=> this.handleChange(evt)} value={this.state.name}></input>
+                    <h1 className ='welcome'>Welcome Aboard</h1>
+                   
+                    <input className='new' placeholder='Occassion'name="name" id="name" onChange={(evt)=> this.handleChange(evt)} value={this.state.name}></input>
 
-                    <label>location:</label>
-                    <input name="location" id="location" onChange={(evt)=> this.handleChange(evt)} value={this.state.location}></input>
+                    <label></label>
+                    <input className='new' placeholder='location' name="location" id="location" onChange={(evt)=> this.handleChange(evt)} value={this.state.location}></input>
 
-                    <label>Date From:</label>
-                    <input name="dateFrom"id="dateFrom"  onChange={(evt)=> this.handleChange(evt)} value={this.state.dateFrom}></input>
+                    <label></label>
+                    <input className='new' placeholder='Check in date:       YYYY-DD-MM'name="dateFrom"id="dateFrom"  onChange={(evt)=> this.handleChange(evt)} value={this.state.dateFrom}></input>
 
-                    <label>Date To:</label>
-                    <input name="dateTo" id="dateTo" onChange={(evt)=> this.handleChange(evt)} value={this.state.dateTo}></input><br></br>
+                    <label></label>
+                    <input className='new'placeholder='Check out date:      YYYY-DD-MM' name="dateTo" id="dateTo" onChange={(evt)=> this.handleChange(evt)} value={this.state.dateTo}></input><br></br>
 
-                    <input className="searchInput" type="submit" value="Set Destination"></input>
+                    <input id='main-submit' className="searchInput" type="submit" value="Set Destination"></input>
                 </form>
             </div>
         )

@@ -165,17 +165,18 @@ class App extends Component {
             <div className="App">
 
                 <div className="nav">
+                <img id='logo'src="../logo.png"/> 
                     { this.state.allVaca.length > 0 && <Nav thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>}
 
                 </div>
 
 
             <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } /><br></br>
+            <div className='other-btn'>
+            <button id='obtn1' className="searchInput" onClick={this.toggleAllVaca}>Recent Vacations</button><br></br><br></br>
 
-            <button className="searchInput" onClick={this.toggleAllVaca}>View Recent Vacations</button><br></br><br></br>
-
-            <button className="searchInput" onClick={this.toggleShowAll}>View Vacation</button>
-
+            <button id='obtn2'className="searchInput" onClick={this.toggleShowAll}>View Hotels</button>
+            </div>
             {this.state.toggleAllVaca &&
             <div>
 
@@ -200,7 +201,7 @@ class App extends Component {
             {this.state.showModal &&
 
                 <form onSubmit={this.handleSubmit} className="editForm">
-                    <h1>This form edits vaacation</h1>
+                    <h1>This form edits vacation</h1>
                     <h1>Edit:</h1>
                     <label>Name:</label>
                     <input name="name"  value={this.state.name} onChange={this.handleChange} ></input><br></br>
@@ -232,7 +233,7 @@ class App extends Component {
 
 
         {this.state.showAll &&
-        <div className="WeatherDiv">Weather
+        <div className="WeatherDiv">
             <Weather vaca={this.state.allVaca[this.state.allVaca.length-1]}/>
 
         </div>
