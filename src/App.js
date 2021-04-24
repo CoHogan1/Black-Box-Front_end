@@ -34,7 +34,7 @@ class App extends Component {
     // set this.state.allVaca to whatever is in the db.-------------------------
     getVacations = () => {
         // fetch from the backend
-        fetch(baseURL + "blackbox") // hed to remove back slash..?
+        fetch(baseURL + "/blackbox") // hed to remove back slash..?
             .then(res => { return res.json()
             }).then(data => {
                 // /console.log(data)
