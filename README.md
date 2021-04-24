@@ -6,3 +6,6 @@ This Mern applicaiton will allows users to set a a beginning and end date, and a
 Future updates we will add average flight prices, and tourists attractions. 
 
 ![Image from iOS](https://user-images.githubusercontent.com/68661954/115960871-042b5180-a4d1-11eb-90cb-e9437e48706d.jpg)
+
+
+![Screen Shot 2021-04-24 at 9 50 34 AM](https://user-images.githubusercontent.com/68661954/115961031-dc88b900-a4d1-11eb-892c-962ac31c2817.png)
