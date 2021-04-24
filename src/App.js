@@ -8,16 +8,16 @@ import Weather from './weather'
 
 // -----------------------------------for keroku deployment
 //console.log(process.env.NODE_ENV)
-//let baseURL = ''
+let baseURL = ''
 
-// if (process.env.NODE_ENV === 'development') {
-//   baseURL = 'http://localhost:3003' // mmarcus uses 3001, or 3000
-// } else {
-//   baseURL = 'heroku url here'
-// }
+if (process.env.NODE_ENV === 'development') {
+  baseURL = 'http://localhost:3003' // mmarcus uses 3001, or 3000
+} else {
+  baseURL = "https://bbvacationsbackend.herokuapp.com"
+}
 //-------------------------------------for heroku deployment
 
-let baseURL = process.env.REACT_APP_BASEURL
+//let baseURL = process.env.REACT_APP_BASEURL
 
 class App extends Component {
     constructor(props){
