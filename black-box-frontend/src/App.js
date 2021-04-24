@@ -5,6 +5,7 @@ import Navu from './Navu'
 import VacationForm from './newVaca'
 import Hotel from './hotels'
 import Weather from './weather'
+<<<<<<< HEAD
 
 // -----------------------------------for keroku deployment
 //console.log(process.env.NODE_ENV)
@@ -19,6 +20,15 @@ import Weather from './weather'
 
 let baseURL = process.env.REACT_APP_BASEURL
 
+=======
+console.log(process.env.NODE_ENV)
+let baseURL = ''
+if (process.env.NODE_ENV === 'development') {
+  baseURL = 'http://localhost:3003' // mmarcus uses 3001, or 3000
+} else {
+  baseURL = 'heroku url here'
+}
+>>>>>>> cda7477996692db43e38593795d68f480bd58200
 class App extends Component {
     constructor(props){
         super(props)
@@ -30,7 +40,6 @@ class App extends Component {
             toggleAllVaca: false,
         }
     }
-
     // get all vacations from the DB
     // set this.state.allVaca to whatever is in the db.-------------------------
     getVacations = () => {
@@ -48,7 +57,6 @@ class App extends Component {
                 })
         })
     }//-------------------------------------------------------------------------
-
     addVaca = (newVaca) => {//--------------------------------------------------
         const copyVaca = [...this.state.allVaca]
         copyVaca.push(newVaca)
@@ -60,7 +68,6 @@ class App extends Component {
         })
         console.log(this.state.allVaca[0] + " from addVaca")
     }//-------------------------------------------------------------------------
-
     deleteVaca = async (id) => {//----------------------------------------------
         const url = baseURL + '/blackbox/' + id
         try{
@@ -71,7 +78,6 @@ class App extends Component {
                 const findIndex = this.state.allVaca.findIndex(vaca => vaca._id === id)
                 const copyVaca = [...this.state.allVaca]
                 copyVaca.splice(findIndex, 1)
-
                 this.setState({
                     allVaca: copyVaca
                 })
@@ -82,14 +88,11 @@ class App extends Component {
         }
         window.location.reload(false) // reloads the file.
     }//-------------------------------------------------------------------------
-
     handleSubmit = async (e) => {//---------------------------------------------
         e.preventDefault()
         //console.log(this.state.editVaca._id)
         const url = baseURL + '/blackbox/' + this.state.editVaca._id
-
         try{
-
           const response = await fetch( url , {
             method: 'PUT',
             body: JSON.stringify({
@@ -102,13 +105,11 @@ class App extends Component {
               'Content-Type' : 'application/json'
             }
           })
-
           if (response.status===200){
             const updatedVacation = await response.json()
             const findIndex = this.state.allVaca.findIndex(vacation => vacation._id === updatedVacation.data._id)
             const copyVacations = [...this.state.allVaca]
             copyVacations[findIndex] = updatedVacation.data
-
             this.setState({
               allVaca: copyVacations,
               showModal:false
@@ -120,14 +121,11 @@ class App extends Component {
         }
         console.log(this.state.allVaca + " here is the vaca");
     }//-------------------------------------------------------------------------
-
-
     handleChange = (e)=>{//-----------------------------------------------------
         this.setState({
             [e.target.name]: e.target.value
         })
     }//-------------------------------------------------------------------------
-
     showEdit = (vacation) => {//------------------------------------------------
         console.log("edit clicked")
         //console.log(vacation)
@@ -140,11 +138,13 @@ class App extends Component {
             editVaca: vacation,
         })
     }//-------------------------------------------------------------------------
-
     componentDidMount() {
         this.getVacations()
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
     toggleAllVaca = () =>{
         //console.log("clicking");
         this.setState({
@@ -152,19 +152,38 @@ class App extends Component {
         })
         // console.log(this.state.showAll)
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
     toggleShowAll = () => {
         //console.log('clicked')
         this.setState({
             showAll: !this.state.showAll
         })
     }
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
     render() {
         //console.log(this.state.allVaca)
         return (
             <div className="App">
+<<<<<<< HEAD
+                <div className="nav">
+                <img id='logo'src="../logo.png"/>
+                    { this.state.allVaca.length > 0 && <Nav thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>}
+                <Navu toggleHead={this.toggleShowAll}/>
+                <header id="head">
+                    <VacationForm  baseURL={ baseURL } addVacation={ this.addVaca } thisIsAProp={this.state.allVaca[this.state.allVaca.length -1]}/>
+                </header>
+                </div>
+            <button onClick={this.toggleAllVaca}>View Recent Vacations</button>
+            <button onClick={this.toggleShowAll}> test data</button>
+            {this.state.toggleAllVaca &&
+=======
 
                 <div className="nav">
                 <img id='logo'src="../logo.png"/>
@@ -186,6 +205,7 @@ class App extends Component {
 
             {this.state.toggleAllVaca &&
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
             <div>
                 <table className="vacationTable">
                   <tbody>
@@ -204,9 +224,13 @@ class App extends Component {
                     }
                   </tbody>
                 </table><br/>
+<<<<<<< HEAD
+                {this.state.showModal &&
+=======
 
                 {this.state.showModal &&
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
                     <form onSubmit={this.handleSubmit} className="editForm">
                         <h1>This form edits vacation</h1>
                         <h1>Edit:</h1>
@@ -223,11 +247,20 @@ class App extends Component {
                 }
             </div>
         }
-
         <div className="vacaPreview">
             {this.state.showAll &&
             <div className="hotelsDiv">
                 <Hotel vaca={this.state.allVaca[this.state.allVaca.length-1]}/>
+<<<<<<< HEAD
+            </div>
+            }
+            {this.state.showAll &&
+            <div className="WeatherDiv">
+                <Weather vaca={this.state.allVaca[this.state.allVaca.length-1]}/>
+            </div>
+            }
+        </div>
+=======
 
             </div>
             }
@@ -242,9 +275,9 @@ class App extends Component {
 
 
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
         </div>
         )
     }
 }
-
 export default App

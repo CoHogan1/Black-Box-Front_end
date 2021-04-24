@@ -4,7 +4,10 @@ body{
     background-color: ##f8f9fa;
     color:#EEEEEE;
     /*background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/giza-egypt-pyramids-in-sunset-scene-wonders-of-the-royalty-free-image-1588090115.jpg?crop=1xw:1xh;center,top&resize=980:*);*/
+<<<<<<< HEAD
+=======
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 /* /* body{
     background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/giza-egypt-pyramids-in-sunset-scene-wonders-of-the-royalty-free-image-1588090115.jpg?crop=1xw:1xh;center,top&resize=980:*);
 >>>>>>> e7d3703b2ed188a296318337aaa3822a060877d3
@@ -13,20 +16,24 @@ body{
     background-color: ;
 } */
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 body{
     margin: 0;
     padding:0;
     height: 100%;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 }
-
 .App {
     text-align: center;
     scroll-behavior: smooth;
 }
-
 #head{
     /* background-image: url('./images/clouds.jpg') ; */
     background-attachment: fixed;
@@ -36,7 +43,6 @@ body{
     height:50vh;
     position: relative;
 }
-
 .nav-bar {
     background-color: rgb(231, 100, 77);
     color:white;
@@ -47,77 +53,92 @@ body{
     width: 100%;
     height: 70px;
     align-items: center;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 }
-
 .nav-links{
     display: flex;
     justify-content: right;
     margin-right: 0;
     width: 30%;
     list-style-type: none;
-
 }
 .nav-links li{
     padding: 10px;
+<<<<<<< HEAD
+=======
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 }
-
 .home{
     display: flex;
     flex: 1 1 auto;
     justify-content: left;
     margin-left: 10%;
 }
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 .nav {
     /*margin-top: 20px;*/
     background-color: #EEC218;
     /*padding: 50px;*/
     /*padding-bottom: 10px;*/
-
     /*color: gold;*/
     height: 5%;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 nav {
     margin-top: 20px;
     background-color: rgba(8, 8, 8, 0.75);
     padding: 5px;
     color: gold;
     height: 25%;
+<<<<<<< HEAD
+=======
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 }
 .nav > h1 {
     /*text-align: center;*/
     margin: auto;
     background-color: #EEC218;
+<<<<<<< HEAD
+=======
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
     width: 50%;
     border-radius: 10px;
     text-shadow: 0 0 10px black;
     /*margin-top: 10px;*/
     padding-bottom: 10px;
 }
-
-
-
-
-
 .vacaData {
     background-color: rgba(0,0,0, 0.7);
     padding: 7px;
     /*border: 2px solid gold;*/
     border-radius: 5px;
+<<<<<<< HEAD
+=======
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
     color:silver;
     /*text-shadow: 0 0  20px black;*/
     margin-top: 500px;
 }
 .addNewVacationForm {
+<<<<<<< HEAD
+=======
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
     /*border: 2px solid green;*/
     /*background-color: rgba(250,250,250, 0.5);*/
     padding-top: 60px;
@@ -126,7 +147,10 @@ nav {
     background-size:cover;
     margin-top: 0px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+<<<<<<< HEAD
+=======
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
     /* border: 2px solid green; */
     background-color: rgba(250,250,250, 0.5);
     padding:20px;
@@ -134,10 +158,12 @@ nav {
     bottom: 30px;
     width: 100%;
     border-radius: 0 10px 10px 0;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 }
-
 input {
   width: 100%;
   margin: 10px 0;
@@ -151,8 +177,6 @@ input:focus {
   outline: 0;
   border: 2px solid black;
 }
-
-
 .vacationTable {
     margin: auto;
     /*border: 2px solid gold;*/
@@ -164,7 +188,6 @@ input:focus {
 .vacationTable> td {
     width:10px;
 }
-
 .editForm {
     border: 2px solid red;
 }
@@ -173,15 +196,7 @@ input:focus {
     flex-direction: row;
     justify-content: center;
     justify-content: space-around;
-
 }
-
-
-
-
-
-
-
 .hotelData {
     display: flex;
     flex-direction: row;
@@ -191,17 +206,14 @@ input:focus {
     border: 3px solid black;
     padding: 10px;
 }
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 .restaurant {
     border: 3px solid lime;
 }
-
-
-
-
-
-
 .allWeather{
     display: flex;
     flex-direction: row;
@@ -211,12 +223,6 @@ input:focus {
     border: 2px solid green;
     padding: 10px;
 }
-
-
-
-
-
-
 input {
     width: 250px;
     /*background: #EEc218;*/
@@ -232,10 +238,7 @@ input {
     left: 0;
     z-index: 5;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-
-
 }
-
 .searchInput{
  background:rgba(0,0,0,0.1);
  color: black;
@@ -248,7 +251,6 @@ input {
   height: 30px;
   margin-left: 10px;
   text-align: center;
-
     border: 3px white solid;
     padding: 18px;
     /*position: absolute;*/
@@ -256,23 +258,19 @@ input {
     left: 0;
     z-index: 5;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> a5b58ac1ab9b68446b4aeafe30a60f6256ff485f
 }
-
 .vacaPreview{
     /*border: 5px solid yellow;*/
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
 }
-
-
-
-
-
 .hotels {
     /*border: 3px solid gold;*/
     width: 270px;
@@ -286,8 +284,6 @@ input {
     flex-direction: row;
     flex-wrap: wrap;
 }
-
-
 .hotels>img {
     height: 300px;
     width: 300px;
@@ -295,11 +291,9 @@ input {
 .hotels> h1{
     font-size: 20px;
 }
-
 .hotels> p {
     font-size: 10px;
 }
-
 .hotelsDiv{
     /*border: 2px solid cyan;*/
     width: 47%;
@@ -311,48 +305,38 @@ input {
     border: 2px solid black;
     width: 40%;
 }
-
 #logo {
     height: 102px;
     width: 102px;
     border-radius: 3px;
     margin-bottom: 0;
 box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-
 }
 .other-btns {
     display: flex;
     flex-direction: row;
     /*margin-bottom: 40px;*/
 }
-
 #obtn1 {
     /*margin-bottom: 60px;*/
     position: absolute;
     margin-top: 33%;
-
 }
-
 #obtn2 {
      position: absolute;
     margin-top: 33%;
     margin-left: 13%;
     /*margin-top: 60%;*/
-
-
 }
-
 #main-submit {
     /*padding-top: 30px;*/
     margin-top: 30px;
     /*margin-left: 80   %;*/
 }
-
 .new {
     margin-top: 40px;
     font-family: cinzil;
 }
-
 .welcome {
     color:black;
     font-family: cinzil;
