@@ -1,38 +1,300 @@
+body{
+    background-color: #E8E8E2;
+    color:#EEEEEE;
+}
+/**/
 .App {
+    text-align: center;
+}
+#head{
+    /* background-image: url('./images/clouds.jpg') ; */
+    /*background-attachment: fixed;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+    position: relative;
+}
+.nav {
+    /*margin-top: 20px;*/
+    background-color: #EEC218;
+    /*padding-bottom: 10px;*/
+    /*color: gold;*/
+    height: 5%;
+}
+.nav > h1 {
+    /*text-align: center;*/
+   text-align: center;
+   margin:auto;
+}
+.vacaData {
+    background-color: rgba(0,0,0, 0.7);
+    padding: 7px;
+    /*border: 2px solid gold;*/
+    border-radius: 5px;
+    color:silver;
+    /*text-shadow: 0 0  20px black;*/
+    margin-top: 500px;
+}
+.addNewVacationForm {
+    /*border: 2px solid green;*/
+    /*background-color: rgba(250,250,250, 0.5);*/
+    padding-top: 60px;
+    padding-bottom: 180px;
+    background-image: url(./clouds.jpg);
+    background-size:cover;
+    margin-top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+input {
+    width: 100px;
+    width: 250px;
+    margin-left: 10px;
+    border-radius: 15px;
+    border: 1px #000 solid;
+    padding: 5px 5px 5px 25px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.searchInput {
+     background:rgba(0,0,0,0.1);
+ color: black;
+ font-family: cinzil;
+ /*font-size: 14px;*/
+ font-weight: bold;
+  /*border: none;*/
+  /*border-radius: 1px;*/
+  width: 140px;
+  height: 30px;
+  margin-left: 10px;
   text-align: center;
+    border: 3px white solid;
+    padding: 18px;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    z-index: 5;
+    /*box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;*/
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.vacationTable {
+    /*margin: auto;*/
+    /*border: 2px solid gold;*/
+    background-color: #EEC218;
+    color:black;
+    border-radius: 3px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    /*box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;*/
+    font-family: cinzil;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-left: 35px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.vacationTable> td {
+    width:50px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.editForm {
+    background-color: #F2F3F4;
+    /*border: 2px solid red;*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    justify-content: center;
+    justify-content: space-around;
+    color: black;
+    /*margin-top: 10px;*/
+    margin-bottom: 60px;
+    margin-right: 40%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding-bottom: 20px;
+    margin-left: 40px;
 }
-
-.App-link {
-  color: #61dafb;
+.currentVaca {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hotelData {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.hotel {
+    border: 3px solid black;
+    padding: 10px;
+}
+.restaurant {
+    border: 3px solid lime;
+}
+.allWeather{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.days {
+    border: 2px solid green;
+    padding: 10px;
+}
+input {
+    width: 250px;
+    /*background: #EEC218;*/
+  /*border: none;*/
+  /*border-radius: 1px;*/
+  /*height: 25px;*/
+  margin-left: 10px;
+  border-radius: 15px;
+    border: 1px #000 solid;
+    padding: 5px 5px 5px 25px;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    z-index: 5;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.searchInput{
+ background:rgba(0,0,0,0.1);
+ color: black;
+ font-family: cinzil;
+ /*font-size: 14px;*/
+ font-weight: bold;
+  /*border: none;*/
+  /*border-radius: 1px;*/
+  width: 140px;
+  height: 30px;
+  margin-left: 10px;
+  text-align: center;
+    border: 3px white solid;
+    padding: 18px;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    z-index: 5;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.vacaPreview{
+    /*border: 5px solid yellow;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.hotels {
+    /*border: 3px solid gold;*/
+    width: 270px;
+    color: black;
+    background-color: #F2F3F4 ;
+    /*color:white;*/
+    margin: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    /*box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;*/
+    /*background-color: #EEC218;*/
+    border-radius: 5px;
+    /*overflow: hidden;*/
+}
+.hotelContainer{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #00355F;
+}
+.hotels>img {
+    height: 200px;
+    width: 200px;
+}
+.hotels> h1{
+    font-size: 20px;
+}
+.hotels> p {
+    font-size: 10px;
+}
+.hotelsDiv{
+    display: flex;
+    /*border: 2px solid cyan;*/
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.WeatherDiv {
+    /*border: 2px solid black;*/
+    width: 200px;
+    background-color: /*#EEC218*/;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+}
+#logo {
+    height: 102px;
+    width: 102px;
+    border-radius: 3px;
+    margin-bottom: 0;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.other-btns {
+    display: flex;
+    flex-direction: row;
+    /*margin-bottom: 40px;*/
+}
+#obtn1 {
+    /*margin-bottom: 60px;*/
+    position: absolute;
+    margin-top: 33%;
+}
+#obtn2 {
+     position: absolute;
+    margin-top: 33%;
+    margin-left: 13%;
+    /*margin-top: 60%;*/
+}
+#main-submit {
+    /*padding-top: 30px;*/
+    margin-top: 30px;
+    /*margin-left: 80   %;*/
+}
+.new {
+    margin-top: 40px;
+    font-family: cinzil;
+    background-color:#F3EBE1;
+}
+.welcome {
+    color:black;
+    font-family: cinzil;
+     font-weight: bold
+}
+.weather-card {
+    position: absolute;
+    color:black;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    background-color: #EEC218;
+    border-radius: 15px;
+    margin-right: 70px;
+}
+.weather-intro {
+    color: black;
+    width: 30px;
+    font-family: cinzil;
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.labels {
+    color: red;
+    margin-top: 50px;
+    color: #00355F;
+    font-weight: bolder;
+    /*font-family: cinzil;*/
+}
+.edit-bar {
+    width: 100px;
+    width: 250px;
+    /*margin-left: 10px;*/
+    border-radius: 15px;
+    border: 1px #000 solid;
+    /*padding: 5px 5px 5px 25px;*/
+    top: 0;
+    left: 0;
+    z-index: 5;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
